@@ -37,7 +37,7 @@ public class RecruitmentPageLocators {
     @FindBy(id = "addCandidate_contactNo")
     private WebElement contactNumber;
 
-    @FindBy(id = "addCandidate_vacancy")
+    @FindBy(xpath = "//select[@id='addCandidate_vacancy']")
     private WebElement jobVacancies;
 
 
@@ -54,7 +54,7 @@ public class RecruitmentPageLocators {
     private WebElement openCalender;
 
 
-    @FindBy(xpath = "//a[@class='ui-state-default ui-state-highlight ui-state-active']")
+    @FindBy(xpath = "//td[@class=' ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today']")
     private WebElement selectCurrentDate;
 
     @FindBy(id = "addCandidate_consentToKeepData")
@@ -62,6 +62,17 @@ public class RecruitmentPageLocators {
 
     @FindBy(id = "btnSave")
     private WebElement saveBtn;
+
+    @FindBy(xpath = "//div[@class='message success fadable']")
+    private WebElement successMsg;
+
+    public WebElement getSuccessMsg() {
+        return successMsg;
+    }
+
+    public void setSuccessMsg(WebElement successMsg) {
+        this.successMsg = successMsg;
+    }
 
     public WebElement getSaveBtn() {
         return saveBtn;
