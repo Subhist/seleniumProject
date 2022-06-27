@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Chrome Only">
+    <listeners>
+        <listener class-name="com.tests.helper.Listeners"></listener>
+    </listeners>
+    <parameter name="browser" value="chrome"></parameter>
+    <test name="Production">
+        <classes>
+            <class name="testcases.OrangeTestCases"></class>
+            <class name="testcases.OrangeTestCases"></class>
+        </classes>
+    </test>
+</suite>
